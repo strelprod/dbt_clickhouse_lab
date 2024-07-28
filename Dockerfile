@@ -11,6 +11,7 @@ RUN apt -y update \
 
 # Install dbt adapter
 RUN set -ex \
+    && python -m pip uninstall db-core \
     && python -m pip install dbt-clickhouse
 
 # Install yc CLI
