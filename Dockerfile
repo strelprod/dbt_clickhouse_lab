@@ -11,7 +11,7 @@ RUN apt -y update \
 
 # Install dbt adapter
 RUN set -ex \
-    && python -m pip install --upgrade dbt-clickhouse
+    && python -m pip install dbt-clickhouse
 
 # Install yc CLI
 RUN curl https://storage.yandexcloud.net/yandexcloud-yc/install.sh | \
